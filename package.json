@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "publish": "ngh --no-silent --branch=master",
+    "prod": "ng build --prod ",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
