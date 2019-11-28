@@ -1,0 +1,19 @@
+dist: trusty
+sudo: false
+
+language: node_js
+node_js:
+  - '12'
+
+
+before_script:
+  - npm install -g @angular/cli
+  - npm install -g angular-cli-ghpages
+
+script:
+  - ng build --prod
+
+after_success:
+  - ng deploy --branch=master --no-silent --repo=https://github.com/jien-huang/jien-huang.github.io.git --cname=www.automation-test.com
+  on:
+    branch: dev
