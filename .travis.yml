@@ -2,9 +2,6 @@ dist: trusty
 sudo: false
 
 language: node_js
-node_js:
-  - '9'
-
 
 cache:
   directories:
@@ -18,4 +15,4 @@ script:
   - ng build --prod
 
 after_success:
-  - ng deploy --branch=master --no-silent --repo=git@github.com/jien-huang/jien-huang.github.io.git --cname=www.automation-test.com
+  - ng deploy --branch=master --no-silent --repo=https://github.com/jien-huang/jien-huang.github.io.git --cname=www.automation-test.com
