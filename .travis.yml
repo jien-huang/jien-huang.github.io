@@ -10,8 +10,12 @@ cache:
   directories:
     - ./node_modules
 
-install:
+before_script:
   - npm install -g @angular/cli
+  - npm install -g angular-cli-ghpages
 
 script:
-  - build.sh
+  - ng build --prod
+
+after_success:
+  - ng deploy --branch=master --no-silent --repo=git@github.com/jien-huang/jien-huang.github.io.git --cname=www.automation-test.com
