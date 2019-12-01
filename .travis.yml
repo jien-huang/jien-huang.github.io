@@ -10,9 +10,10 @@ install:
   - npm install -g angular-cli-ghpages
 
 script:
+  - npm ci
   - ng build --prod
 
 after_success:
-  - ng deploy --branch=master --no-silent --repo=https://github.com/jien-huang/jien-huang.github.io.git --cname=www.automation-test.com
-  on:
-    branch: dev
+- ng deploy --branch=master --no-silent --repo=https://github.com/jien-huang/jien-huang.github.io.git --cname=www.automation-test.com
+on:
+  branch: dev
