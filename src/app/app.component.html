@@ -22,9 +22,7 @@
     </ng-template>
     <mat-step editable=true completed=true>
       <ng-template matStepLabel>General Ideas</ng-template>
-      <h2>Title</h2>
       <div [innerHtml]="intro" class="markdown-body">
-        
       </div>
     </mat-step>
     <mat-step>
@@ -78,8 +76,8 @@
     </mat-step>
     <mat-step>
       <ng-template matStepLabel>About </ng-template>
-      <h2>Feel free to contact us for help, all kinds of suggestions are more than welcome!</h2>
-      <a href="mailto:huangjien@gmail.com">Email</a>
+      <div [innerHtml]="about" class="markdown-body">
+      </div>
     </mat-step>
 
   </mat-vertical-stepper>
