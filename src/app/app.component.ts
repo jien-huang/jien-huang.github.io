@@ -30,4 +30,5 @@ const Http = (query = "", variables = {}, alive = false) => new Promise((resolve
 })
 export class AppComponent {
   title = 'www.automation-test.com';
+  intro = '<h1>No. 1 Rule</h1>\n<ol>\n<li>Keep the unit test coverage rate above 90% .</li>\n<li>Refactor it at least once per week.</li>\n<li>Make it workable, then beautify it.</li>\n</ol>';
 }
